@@ -1,0 +1,1523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14A4ABEB-4393-4DCE-A75E-FC0B93F7FE11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MTOMS</RootNamespace>
+    <AssemblyName>MTOMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>RASMM_100.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BIControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HotSpringsLubowaNS\bin\Debug\BIControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ChilkatDotNet2, Version=9.2.1.0, Culture=neutral, PublicKeyToken=eb5fc1fc52ef09bd, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\ChilkatDotNet2.dll</HintPath>
+    </Reference>
+    <Reference Include="CollapsibleSplitter, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HotSpringsLubowaNS\bin\Debug\CollapsibleSplitter.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Design, Version=10.4.0.1, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2018.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=33.1.0.1000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.2.2.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\OnlineDBSettingsCreator\OnlineDBSettingsCreator\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BackUpComponent\BackUpComponent\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RiscoPrintLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\RiscoPrintLib\RiscoPrintLib\bin\Debug\RiscoPrintLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SdaHelperManagerVistaDB">
+      <HintPath>..\..\..\..\HnH\SdaHelperManagerVistaDB\bin\Debug\SdaHelperManagerVistaDB.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear">
+      <HintPath>..\..\..\ReggiesSupermarket\ReggiesSupermarket\bin\Debug\SpreadsheetGear.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear.Design">
+      <HintPath>..\..\..\ReggiesSupermarket\ReggiesSupermarket\bin\Debug\SpreadsheetGear.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TenTec.Windows.iGridLib.iGPrintManager, Version=2.50.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SOFTWARE\IGrid\CRack\TenTec.Windows.iGridLib.iGPrintManager.dll</HintPath>
+    </Reference>
+    <Reference Include="TenTec.Windows.iGridLib.iGrid, Version=2.50.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SOFTWARE\IGrid\CRack\TenTec.Windows.iGridLib.iGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="VistaDB.5.NET40, Version=5.7.0.0, Culture=neutral, PublicKeyToken=dfc935afe2125461, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Gibraltar Software\VistaDB 5\Redist\NET40\VistaDB.5.NET40.dll</HintPath>
+    </Reference>
+    <Reference Include="VistaDBSchemaHelper, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\VistaSchemaHelper\VistaSchemaHelper\bin\Debug\VistaDBSchemaHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="XCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\xso\xso\bin\Debug\XCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="XPrintTypesPluggin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="XSDALicenceV, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\MTOMS_A\XSDALicenceVOpenLicence\bin\Debug\XSDALicenceV.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountStatement\AccountStatementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountStatement\AccountStatementForm.designer.cs">
+      <DependentUpon>AccountStatementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountStatement\datam.cs" />
+    <Compile Include="AccountStatement\fnn.cs" />
+    <Compile Include="Accounts\accn.cs" />
+    <Compile Include="Accounts\COAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\COAccounts.designer.cs">
+      <DependentUpon>COAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\datam.cs" />
+    <Compile Include="Accounts\DiscontinuedAccountListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\DiscontinuedAccountListForm.Designer.cs">
+      <DependentUpon>DiscontinuedAccountListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\em.cs" />
+    <Compile Include="Accounts\ExtendAccountMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\ExtendAccountMaker.designer.cs">
+      <DependentUpon>ExtendAccountMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\fnn.cs" />
+    <Compile Include="Accounts\ic\accountC.cs" />
+    <Compile Include="Accounts\ic\accountPayableC.cs" />
+    <Compile Include="Accounts\ic\account_d_typeC.cs" />
+    <Compile Include="AccountStatement\ic\account_AL_statementC.cs" />
+    <Compile Include="Accounts\ic\acc_cash_transfer.cs" />
+    <Compile Include="Accounts\ic\CrExpOffItem.cs" />
+    <Compile Include="Accounts\ic\del_acc_payable_trans.cs" />
+    <Compile Include="Accounts\ic\creditpaymentC.cs" />
+    <Compile Include="Accounts\ic\dbAccountSummay.cs" />
+    <Compile Include="Accounts\ic\deleteJournal.cs" />
+    <Compile Include="Accounts\ic\off_itemX.cs" />
+    <Compile Include="Accounts\ic\trialBalanceC.cs" />
+    <Compile Include="Accounts\ic\un_converted_foreign_currencyC.cs" />
+    <Compile Include="Accounts\ic\WorkingTransDate.cs" />
+    <Compile Include="Accounts\IncomeAccountsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\IncomeAccountsManager.designer.cs">
+      <DependentUpon>IncomeAccountsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\IncomeAccountsUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\IncomeAccountsUpdater.designer.cs">
+      <DependentUpon>IncomeAccountsUpdater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\OtherIncomeCategoryMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\OtherIncomeCategoryMaker.designer.cs">
+      <DependentUpon>OtherIncomeCategoryMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp\ExcludeDbTable.cs" />
+    <Compile Include="BackUp\fnn.cs" />
+    <Compile Include="BackUp\TransferToMySqlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackUp\TransferToMySqlForm.Designer.cs">
+      <DependentUpon>TransferToMySqlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp\XBEIHelper.cs" />
+    <Compile Include="BackUp\xingMysql.cs" />
+    <Compile Include="Bank Reconciliation\BankReconciliationAccountsMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank Reconciliation\BankReconciliationAccountsMaker.Designer.cs">
+      <DependentUpon>BankReconciliationAccountsMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank Reconciliation\BankReconciliationTransMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank Reconciliation\BankReconciliationTransMaker.designer.cs">
+      <DependentUpon>BankReconciliationTransMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank Reconciliation\datam.cs" />
+    <Compile Include="Bank Reconciliation\em.cs" />
+    <Compile Include="Bank Reconciliation\ic\bank_reconc_transC.cs" />
+    <Compile Include="Bank Reconciliation\ic\bank_reconc_accountC.cs" />
+    <Compile Include="Banking\BankAccountsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking\BankAccountsManager.Designer.cs">
+      <DependentUpon>BankAccountsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\BankingMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking\BankingMaker.Designer.cs">
+      <DependentUpon>BankingMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\BankAccountMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking\BankAccountMaker.Designer.cs">
+      <DependentUpon>BankAccountMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank Reconciliation\BankReconcManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank Reconciliation\BankReconcManager.designer.cs">
+      <DependentUpon>BankReconcManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\BankWithDraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking\BankWithDraw.designer.cs">
+      <DependentUpon>BankWithDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\em.cs" />
+    <Compile Include="Banking\fnn.cs" />
+    <Compile Include="Banking\ic\bankAccountC.cs" />
+    <Compile Include="Banking\ic\bankC.cs" />
+    <Compile Include="Banking\ic\bankingDepositChildC.cs" />
+    <Compile Include="Banking\ic\bankingDepositMasterC.cs" />
+    <Compile Include="Banking\datam.cs" />
+    <Compile Include="Banking\ic\bankWithDrawC.cs" />
+    <Compile Include="BatchNo\BatchNoMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchNo\BatchNoMaker.designer.cs">
+      <DependentUpon>BatchNoMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchNo\BatchNoManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchNo\BatchNoManager.Designer.cs">
+      <DependentUpon>BatchNoManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchNo\BatchNoSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchNo\BatchNoSelector.Designer.cs">
+      <DependentUpon>BatchNoSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchNo\datam.cs" />
+    <Compile Include="BatchNo\ic\batch_no_settingC.cs" />
+    <Compile Include="BulkRangerPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulkRangerPrinter.Designer.cs">
+      <DependentUpon>BulkRangerPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChurchGroups\ChurchGroupMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChurchGroups\ChurchGroupMaker.Designer.cs">
+      <DependentUpon>ChurchGroupMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChurchGroups\ChurchGroupManager2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChurchGroups\ChurchGroupManager2.designer.cs">
+      <DependentUpon>ChurchGroupManager2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChurchGroups\ChurchGroupTypeMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChurchGroups\ChurchGroupTypeMaker.Designer.cs">
+      <DependentUpon>ChurchGroupTypeMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChurchGroups\datam.cs" />
+    <Compile Include="ClosingBalance\AccountsBalancesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClosingBalance\AccountsBalancesManager.designer.cs">
+      <DependentUpon>AccountsBalancesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClosingBalance\ClosingBalanceMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClosingBalance\ClosingBalanceMaker.Designer.cs">
+      <DependentUpon>ClosingBalanceMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClosingBalance\datam.cs" />
+    <Compile Include="ClosingBalance\EditOpeningBalanceMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClosingBalance\EditOpeningBalanceMaker.designer.cs">
+      <DependentUpon>EditOpeningBalanceMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClosingBalance\em.cs" />
+    <Compile Include="ClosingBalance\fnn.cs" />
+    <Compile Include="ClosingBalance\ic\adjust_balanceD.cs" />
+    <Compile Include="ClosingBalance\ic\adjust_balanceM.cs" />
+    <Compile Include="ClosingBalance\ic\open_balanceC.cs" />
+    <Compile Include="ColFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColFilter.designer.cs">
+      <DependentUpon>ColFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Correction\ic\church_groupC.cs" />
+    <Compile Include="Correction\ic\church_group_typeC.cs" />
+    <Compile Include="ChurchSubUnits\ChurchSubUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChurchSubUnits\ChurchSubUnits.designer.cs">
+      <DependentUpon>ChurchSubUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChurchSubUnits\ic\church_sub_unitC.cs" />
+    <Compile Include="ChurchSubUnits\em.cs" />
+    <Compile Include="ChurchSubUnits\datam.cs" />
+    <Compile Include="Correction\cr\cr_acc_payable_trans_tb.cs" />
+    <Compile Include="Correction\cr\cr_off_account.cs" />
+    <Compile Include="Creditors\CreditorsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creditors\CreditorsManager.Designer.cs">
+      <DependentUpon>CreditorsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creditors\datam.cs" />
+    <Compile Include="Creditors\MergeAccountsMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creditors\MergeAccountsMaker.designer.cs">
+      <DependentUpon>MergeAccountsMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datam.cs" />
+    <Compile Include="datatransfer.cs" />
+    <Compile Include="DefaultReceiptPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefaultReceiptPrinter.Designer.cs">
+      <DependentUpon>DefaultReceiptPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\DepartmentMaker2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departments\DepartmentMaker2.Designer.cs">
+      <DependentUpon>DepartmentMaker2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\DepartmentManager2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departments\DepartmentManager2.designer.cs">
+      <DependentUpon>DepartmentManager2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\datam.cs" />
+    <Compile Include="Departments\em.cs" />
+    <Compile Include="Departments\ic\departmentC.cs" />
+    <Compile Include="Designations\datam.cs" />
+    <Compile Include="Designations\em.cs" />
+    <Compile Include="Designations\ic\rolesC.cs" />
+    <Compile Include="Designations\DesignationMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designations\DesignationMaker.Designer.cs">
+      <DependentUpon>DesignationMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistributionPercentage\em.cs" />
+    <Compile Include="DuplicateMembers\MapDuplicateMembersMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuplicateMembers\MapDuplicateMembersMaker.designer.cs">
+      <DependentUpon>MapDuplicateMembersMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="em.cs" />
+    <Compile Include="ExcelMemberTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelMemberTransfer.Designer.cs">
+      <DependentUpon>ExcelMemberTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\xcel.cs" />
+    <Compile Include="Expenses\ExpenseAccountMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\ExpenseAccountMaker.Designer.cs">
+      <DependentUpon>ExpenseAccountMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\ExpensesYearAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\ExpensesYearAnalysis.designer.cs">
+      <DependentUpon>ExpensesYearAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\fnn.cs" />
+    <Compile Include="Expenses\ic\expense_trans_childC.cs" />
+    <Compile Include="Expenses\ic\expIncSrcTypeC.cs" />
+    <Compile Include="Expenses\MakeAdditionalExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\MakeAdditionalExpense.designer.cs">
+      <DependentUpon>MakeAdditionalExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\MakeCheckExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\MakeCheckExpense.designer.cs">
+      <DependentUpon>MakeCheckExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\MakeExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\MakeExpense.Designer.cs">
+      <DependentUpon>MakeExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\DailyExpensesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\DailyExpensesManager.designer.cs">
+      <DependentUpon>DailyExpensesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\em.cs" />
+    <Compile Include="Expenses\datam.cs" />
+    <Compile Include="Expenses\ic\expense_transC.cs" />
+    <Compile Include="Expenses\ic\expense_accountC.cs" />
+    <Compile Include="Expenses\ic\expense_catC.cs" />
+    <Compile Include="Expenses\ExpensesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\ExpensesManager.designer.cs">
+      <DependentUpon>ExpensesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\MakeExpenseBulk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\MakeExpenseBulk.designer.cs">
+      <DependentUpon>MakeExpenseBulk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\PayCreditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\PayCreditor.designer.cs">
+      <DependentUpon>PayCreditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\ViewExpensesByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\ViewExpensesByID.designer.cs">
+      <DependentUpon>ViewExpensesByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\ViewQMYExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\ViewQMYExpenses.designer.cs">
+      <DependentUpon>ViewQMYExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses\ViewQMYExpensesB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\ViewQMYExpensesB.designer.cs">
+      <DependentUpon>ViewQMYExpensesB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fnn.cs" />
+    <Compile Include="ForeignExchange\datam.cs" />
+    <Compile Include="ForeignExchange\em.cs" />
+    <Compile Include="ForeignExchange\ForeignExchangeMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForeignExchange\ForeignExchangeMaker.Designer.cs">
+      <DependentUpon>ForeignExchangeMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForeignExchange\ForeignExchangeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForeignExchange\ForeignExchangeManager.designer.cs">
+      <DependentUpon>ForeignExchangeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForeignExchange\ic\foreign_exchange_convC.cs" />
+    <Compile Include="form_data.cs" />
+    <Compile Include="Accounts\IncomeAccountsMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\IncomeAccountsMaker.Designer.cs">
+      <DependentUpon>IncomeAccountsMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalKeyBoardHook.cs" />
+    <Compile Include="GroupDataPicDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupDataPicDisplay.Designer.cs">
+      <DependentUpon>GroupDataPicDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouseHoldMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouseHoldMaker.Designer.cs">
+      <DependentUpon>HouseHoldMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ic\deleteBaseC.cs" />
+    <Compile Include="Expenses\MakeExpensePro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses\MakeExpensePro.designer.cs">
+      <DependentUpon>MakeExpensePro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LCB\LCBRangeStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LCB\LCBRangeStatement.designer.cs">
+      <DependentUpon>LCBRangeStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberStatistics.Designer.cs">
+      <DependentUpon>MemberStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberStats\datam.cs" />
+    <Compile Include="MemberStats\ic\stat_mem_catC.cs" />
+    <Compile Include="MemberStats\ic\stat_mem_typeC.cs" />
+    <Compile Include="MemberStatus\ApostacyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberStatus\ApostacyForm.designer.cs">
+      <DependentUpon>ApostacyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberStatus\DeathForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberStatus\DeathForm.designer.cs">
+      <DependentUpon>DeathForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberStatus\TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberStatus\TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\BulkPicEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\BulkPicEditor.designer.cs">
+      <DependentUpon>BulkPicEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ChildrenMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\ChildrenMaker.designer.cs">
+      <DependentUpon>ChildrenMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\Extension\xTension.cs" />
+    <Compile Include="Members\ic\coupleC.cs" />
+    <Compile Include="Members\ic\deathC.cs" />
+    <Compile Include="Members\ic\maritalnameC.cs" />
+    <Compile Include="Members\ic\off_member_unregC.cs" />
+    <Compile Include="Members\MemberDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\MemberDetail.Designer.cs">
+      <DependentUpon>MemberDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\MemberMaker2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\MemberMaker2.designer.cs">
+      <DependentUpon>MemberMaker2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\MemberMakerTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\MemberMakerTemp.designer.cs">
+      <DependentUpon>MemberMakerTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\MemberMakerTempUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\MemberMakerTempUpdater.designer.cs">
+      <DependentUpon>MemberMakerTempUpdater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\MemberPicView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\MemberPicView.Designer.cs">
+      <DependentUpon>MemberPicView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\MemberUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\MemberUpd.designer.cs">
+      <DependentUpon>MemberUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ParentsMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\ParentsMaker.designer.cs">
+      <DependentUpon>ParentsMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\PStatic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberView\datam.cs" />
+    <Compile Include="MemberView\ic\GroupDataPicDisplay.cs" />
+    <Compile Include="MemberView\ic\MemberReportCategory.cs" />
+    <Compile Include="MemberView\MemColFilterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberView\MemColFilterManager.designer.cs">
+      <DependentUpon>MemColFilterManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberStatus\datam.cs" />
+    <Compile Include="MemberStatus\ic\apostacyC.cs" />
+    <Compile Include="MemberStatus\ic\deathC.cs" />
+    <Compile Include="MemberStatus\ic\displineC.cs" />
+    <Compile Include="MemberStatus\ic\transferC.cs" />
+    <Compile Include="Members\datam.cs" />
+    <Compile Include="Members\ic\academicC.cs" />
+    <Compile Include="Members\ic\addressC.cs" />
+    <Compile Include="Members\ic\attendance.cs" />
+    <Compile Include="Members\ic\baptismC.cs" />
+    <Compile Include="Members\ic\children.cs" />
+    <Compile Include="Members\ic\fellowship_groups.cs" />
+    <Compile Include="Members\ic\memberC.cs" />
+    <Compile Include="Members\ic\mempicC.cs" />
+    <Compile Include="Members\ic\neighbour.cs" />
+    <Compile Include="Members\ic\nokC.cs" />
+    <Compile Include="Members\ic\occupationC.cs" />
+    <Compile Include="Members\ic\parentC.cs" />
+    <Compile Include="Members\ic\spouseC.cs" />
+    <Compile Include="MemberView\ic\MemberReport.cs" />
+    <Compile Include="MemberView\ic\FilterSection.cs" />
+    <Compile Include="MemberView\MemberViewerManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberView\MemberViewerManager.Designer.cs">
+      <DependentUpon>MemberViewerManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberView\MemberViewerMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberView\MemberViewerMaker.Designer.cs">
+      <DependentUpon>MemberViewerMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberView\ReportCategoryMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberView\ReportCategoryMaker.designer.cs">
+      <DependentUpon>ReportCategoryMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberView\SaveMemberReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberView\SaveMemberReport.Designer.cs">
+      <DependentUpon>SaveMemberReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthSelector.Designer.cs">
+      <DependentUpon>MonthSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OffAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OffAnalysis.Designer.cs">
+      <DependentUpon>OffAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OffBatchAnalyzer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OffBatchAnalyzer.Designer.cs">
+      <DependentUpon>OffBatchAnalyzer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\CloseSabbathManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\CloseSabbathManager.Designer.cs">
+      <DependentUpon>CloseSabbathManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\DefaultA4Printer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\DefaultA4Printer.designer.cs">
+      <DependentUpon>DefaultA4Printer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\fnn.cs" />
+    <Compile Include="Offerings\ic\date_loaderC.cs" />
+    <Compile Include="Offerings\ic\off_account.cs" />
+    <Compile Include="Offerings\ic\off_receipt_az.cs" />
+    <Compile Include="Offerings\ic\off_batch.cs" />
+    <Compile Include="Offerings\ic\off_receipt_unreg_az.cs" />
+    <Compile Include="Offerings\MergeUnRegisteredToRegistered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\MergeUnRegisteredToRegistered.Designer.cs">
+      <DependentUpon>MergeUnRegisteredToRegistered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OffBatchRangeOffertorySetUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OffBatchRangeOffertorySetUp.Designer.cs">
+      <DependentUpon>OffBatchRangeOffertorySetUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\datam.cs" />
+    <Compile Include="Offerings\em.cs" />
+    <Compile Include="Offerings\ic\mem_off_info.cs" />
+    <Compile Include="Offerings\ic\offering_canc.cs" />
+    <Compile Include="Offerings\ic\offering_details.cs" />
+    <Compile Include="Offerings\ic\offering_master.cs" />
+    <Compile Include="Offerings\ic\off_batch_sabbath.cs" />
+    <Compile Include="Offerings\ic\off_couple.cs" />
+    <Compile Include="Offerings\ic\off_dest_item.cs" />
+    <Compile Include="Offerings\ic\off_filter.cs" />
+    <Compile Include="Offerings\ic\off_item.cs" />
+    <Compile Include="Offerings\ic\off_payment_details.cs" />
+    <Compile Include="Offerings\ic\off_receipt.cs" />
+    <Compile Include="Offerings\ic\oo_item.cs" />
+    <Compile Include="Offerings\ic\other_offering.cs" />
+    <Compile Include="Members\MemberManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\MemberManager.designer.cs">
+      <DependentUpon>MemberManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\NeighbourMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\NeighbourMaker.designer.cs">
+      <DependentUpon>NeighbourMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\ic\other_offering_analysis.cs" />
+    <Compile Include="Offerings\ic\shared_off_item.cs" />
+    <Compile Include="Offerings\OfferingIncomeAccountReplacer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingIncomeAccountReplacer.designer.cs">
+      <DependentUpon>OfferingIncomeAccountReplacer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OfferingIncomeAccountSabbathReplacer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingIncomeAccountSabbathReplacer.designer.cs">
+      <DependentUpon>OfferingIncomeAccountSabbathReplacer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OfferingDistributionMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingDistributionMaker.Designer.cs">
+      <DependentUpon>OfferingDistributionMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OfferingMonthAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingMonthAnalysis.Designer.cs">
+      <DependentUpon>OfferingMonthAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistributionPercentage\ic\offeringPercentageDistributionC.cs" />
+    <Compile Include="Offerings\OfferingRangeAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingRangeAnalysis.Designer.cs">
+      <DependentUpon>OfferingRangeAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OfferingSabAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingSabAnalysis.Designer.cs">
+      <DependentUpon>OfferingSabAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OfferingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingManager.Designer.cs">
+      <DependentUpon>OfferingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OfferingYearMemberActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingYearMemberActivity.designer.cs">
+      <DependentUpon>OfferingYearMemberActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OffertoryRangeAnalysisA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OffertoryRangeAnalysisA.Designer.cs">
+      <DependentUpon>OffertoryRangeAnalysisA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OffertoryRangeLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OffertoryRangeLoader.designer.cs">
+      <DependentUpon>OffertoryRangeLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OffertoryRangePrinterMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OffertoryRangePrinterMaker.Designer.cs">
+      <DependentUpon>OffertoryRangePrinterMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\OffSideInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OffSideInfo.Designer.cs">
+      <DependentUpon>OffSideInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings\ic\off_source_item.cs" />
+    <Compile Include="Offerings\OfferingYearAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offerings\OfferingYearAnalysis.designer.cs">
+      <DependentUpon>OfferingYearAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OffMakerN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OffMakerN.Designer.cs">
+      <DependentUpon>OffMakerN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldUpdates\fnn.cs" />
+    <Compile Include="OldUpdates\UpdateReturnC.cs" />
+    <Compile Include="PendingChequesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PendingChequesManager.designer.cs">
+      <DependentUpon>PendingChequesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pledge\AddToPledgeMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pledge\AddToPledgeMaker.designer.cs">
+      <DependentUpon>AddToPledgeMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pledge\PledgeMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pledge\PledgeMaker.Designer.cs">
+      <DependentUpon>PledgeMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pledge\datam.cs" />
+    <Compile Include="Pledge\em.cs" />
+    <Compile Include="Pledge\ic\pledgeC.cs" />
+    <Compile Include="Pledge\ic\pledgeSettingC.cs" />
+    <Compile Include="Pledge\ic\pledge_paymentC.cs" />
+    <Compile Include="Pledge\PledgeSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pledge\PledgeSettings.designer.cs">
+      <DependentUpon>PledgeSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pledge\PledgesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pledge\PledgesManager.Designer.cs">
+      <DependentUpon>PledgesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pledge\PledgesManagerB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pledge\PledgesManagerB.designer.cs">
+      <DependentUpon>PledgesManagerB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pledge\ViewPledgeMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pledge\ViewPledgeMembers.Designer.cs">
+      <DependentUpon>ViewPledgeMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\AdvReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\AdvReceiptBulk.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\AdvReceiptB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\IGridPrint.cs" />
+    <Compile Include="Print\Areceipt.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RePlay\ic\ReplayBankDepChild.cs" />
+    <Compile Include="RePlay\ic\ReplayBankDepMaster.cs" />
+    <Compile Include="RePlay\ic\ReplayBankWithDraw.cs" />
+    <Compile Include="RePlay\Replay.cs" />
+    <Compile Include="Settings\datam.cs" />
+    <Compile Include="Settings\DefaultSystemSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\DefaultSystemSettings.designer.cs">
+      <DependentUpon>DefaultSystemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\em.cs" />
+    <Compile Include="Transaction\em.cs" />
+    <Compile Include="Transaction\ic\transactionC.cs" />
+    <Compile Include="Transfer\AccountsTransferMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AccountsTransferMaker.designer.cs">
+      <DependentUpon>AccountsTransferMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\datam.cs" />
+    <Compile Include="Transfer\em.cs" />
+    <Compile Include="Transfer\ic\cash_transferC.cs" />
+    <Compile Include="Transfer\MonthlyTransferManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\MonthlyTransferManager.designer.cs">
+      <DependentUpon>MonthlyTransferManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewChequeExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewChequeExpenses.Designer.cs">
+      <DependentUpon>ViewChequeExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMemberInvolvementDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMemberInvolvementDetails.designer.cs">
+      <DependentUpon>ViewMemberInvolvementDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSingleSabbathAccountDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSingleSabbathAccountDetails.Designer.cs">
+      <DependentUpon>ViewSingleSabbathAccountDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountStatement\AccountStatementForm.resx">
+      <DependentUpon>AccountStatementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\DiscontinuedAccountListForm.resx">
+      <DependentUpon>DiscontinuedAccountListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\ExtendAccountMaker.resx">
+      <DependentUpon>ExtendAccountMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\IncomeAccountsManager.resx">
+      <DependentUpon>IncomeAccountsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\IncomeAccountsUpdater.resx">
+      <DependentUpon>IncomeAccountsUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\OtherIncomeCategoryMaker.resx">
+      <DependentUpon>OtherIncomeCategoryMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackUp\TransferToMySqlForm.resx">
+      <DependentUpon>TransferToMySqlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank Reconciliation\BankReconciliationAccountsMaker.resx">
+      <DependentUpon>BankReconciliationAccountsMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank Reconciliation\BankReconciliationTransMaker.resx">
+      <DependentUpon>BankReconciliationTransMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking\BankAccountsManager.resx">
+      <DependentUpon>BankAccountsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking\BankingMaker.resx">
+      <DependentUpon>BankingMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking\BankAccountMaker.resx">
+      <DependentUpon>BankAccountMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank Reconciliation\BankReconcManager.resx">
+      <DependentUpon>BankReconcManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking\BankWithDraw.resx">
+      <DependentUpon>BankWithDraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchNo\BatchNoMaker.resx">
+      <DependentUpon>BatchNoMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchNo\BatchNoManager.resx">
+      <DependentUpon>BatchNoManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchNo\BatchNoSelector.resx">
+      <DependentUpon>BatchNoSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkRangerPrinter.resx">
+      <DependentUpon>BulkRangerPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChurchGroups\ChurchGroupManager2.resx">
+      <DependentUpon>ChurchGroupManager2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChurchGroups\ChurchGroupTypeMaker.resx">
+      <DependentUpon>ChurchGroupTypeMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClosingBalance\AccountsBalancesManager.resx">
+      <DependentUpon>AccountsBalancesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClosingBalance\ClosingBalanceMaker.resx">
+      <DependentUpon>ClosingBalanceMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClosingBalance\EditOpeningBalanceMaker.resx">
+      <DependentUpon>EditOpeningBalanceMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColFilter.resx">
+      <DependentUpon>ColFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creditors\MergeAccountsMaker.resx">
+      <DependentUpon>MergeAccountsMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultReceiptPrinter.resx">
+      <DependentUpon>DefaultReceiptPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designations\DesignationMaker.resx">
+      <DependentUpon>DesignationMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DuplicateMembers\MapDuplicateMembersMaker.resx">
+      <DependentUpon>MapDuplicateMembersMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelMemberTransfer.resx">
+      <DependentUpon>ExcelMemberTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\ExpenseAccountMaker.resx">
+      <DependentUpon>ExpenseAccountMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\ExpensesManager.resx">
+      <DependentUpon>ExpensesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\ExpensesYearAnalysis.resx">
+      <DependentUpon>ExpensesYearAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\MakeAdditionalExpense.resx">
+      <DependentUpon>MakeAdditionalExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\MakeCheckExpense.resx">
+      <DependentUpon>MakeCheckExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\MakeExpenseBulk.resx">
+      <DependentUpon>MakeExpenseBulk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\PayCreditor.resx">
+      <DependentUpon>PayCreditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\ViewExpensesByID.resx">
+      <DependentUpon>ViewExpensesByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\ViewQMYExpenses.resx">
+      <DependentUpon>ViewQMYExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\ViewQMYExpensesB.resx">
+      <DependentUpon>ViewQMYExpensesB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForeignExchange\ForeignExchangeMaker.resx">
+      <DependentUpon>ForeignExchangeMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForeignExchange\ForeignExchangeManager.resx">
+      <DependentUpon>ForeignExchangeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\MakeExpensePro.resx">
+      <DependentUpon>MakeExpensePro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LCB\LCBRangeStatement.resx">
+      <DependentUpon>LCBRangeStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\MemberMakerTemp.resx">
+      <DependentUpon>MemberMakerTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\MemberMakerTempUpdater.resx">
+      <DependentUpon>MemberMakerTempUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthSelector.resx">
+      <DependentUpon>MonthSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OffBatchAnalyzer.resx">
+      <DependentUpon>OffBatchAnalyzer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\CloseSabbathManager.resx">
+      <DependentUpon>CloseSabbathManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\DefaultA4Printer.resx">
+      <DependentUpon>DefaultA4Printer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\MergeUnRegisteredToRegistered.resx">
+      <DependentUpon>MergeUnRegisteredToRegistered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OffBatchRangeOffertorySetUp.resx">
+      <DependentUpon>OffBatchRangeOffertorySetUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OfferingIncomeAccountReplacer.resx">
+      <DependentUpon>OfferingIncomeAccountReplacer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OfferingIncomeAccountSabbathReplacer.resx">
+      <DependentUpon>OfferingIncomeAccountSabbathReplacer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OfferingDistributionMaker.resx">
+      <DependentUpon>OfferingDistributionMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OfferingSabAnalysis.resx">
+      <DependentUpon>OfferingSabAnalysis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OfferingManager.resx">
+      <DependentUpon>OfferingManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OfferingYearMemberActivity.resx">
+      <DependentUpon>OfferingYearMemberActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OffertoryRangeAnalysisA.resx">
+      <DependentUpon>OffertoryRangeAnalysisA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OffertoryRangeLoader.resx">
+      <DependentUpon>OffertoryRangeLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OffertoryRangePrinterMaker.resx">
+      <DependentUpon>OffertoryRangePrinterMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OffSideInfo.resx">
+      <DependentUpon>OffSideInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PendingChequesManager.resx">
+      <DependentUpon>PendingChequesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pledge\AddToPledgeMaker.resx">
+      <DependentUpon>AddToPledgeMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pledge\PledgeSettings.resx">
+      <DependentUpon>PledgeSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pledge\PledgesManager.resx">
+      <DependentUpon>PledgesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pledge\PledgesManagerB.resx">
+      <DependentUpon>PledgesManagerB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pledge\ViewPledgeMembers.resx">
+      <DependentUpon>ViewPledgeMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\DefaultSystemSettings.resx">
+      <DependentUpon>DefaultSystemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AccountsTransferMaker.resx">
+      <DependentUpon>AccountsTransferMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\MonthlyTransferManager.resx">
+      <DependentUpon>MonthlyTransferManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewChequeExpenses.resx">
+      <DependentUpon>ViewChequeExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMemberInvolvementDetails.resx">
+      <DependentUpon>ViewMemberInvolvementDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSingleSabbathAccountDetails.resx">
+      <DependentUpon>ViewSingleSabbathAccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mtoms_db_five.dbx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="month_cash_statement.frx" />
+    <EmbeddedResource Include="account_statement.frx" />
+    <EmbeddedResource Include="cheque_expense_report.frx" />
+    <EmbeddedResource Include="member_offertory_list_view.frx" />
+    <EmbeddedResource Include="member_range_reportA4.frx" />
+    <EmbeddedResource Include="member_range_reportA4_s1.frx" />
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <EmbeddedResource Include="expense_range.frx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="sms\ComposeSms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms\ComposeSms.designer.cs">
+      <DependentUpon>ComposeSms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms\datam.cs" />
+    <Compile Include="sms\LoadingCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="sms\smsClient.cs" />
+    <Compile Include="sms\smsContact.cs" />
+    <Compile Include="sms\smsfileSys.cs" />
+    <Compile Include="sms\SmsMakerCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms\SmsMakerCompany.designer.cs">
+      <DependentUpon>SmsMakerCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms\SmsMakerPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms\SmsMakerPersonal.designer.cs">
+      <DependentUpon>SmsMakerPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms\SmsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms\SmsManager.designer.cs">
+      <DependentUpon>SmsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms\smsTransC.cs" />
+    <Compile Include="CashAccounttManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashAccounttManager.designer.cs">
+      <DependentUpon>CashAccounttManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banking\BankingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banking\BankingManager.designer.cs">
+      <DependentUpon>BankingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrialBalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrialBalanceForm.Designer.cs">
+      <DependentUpon>TrialBalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkManager.designer.cs">
+      <DependentUpon>WorkManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="sabbath_cash_count.frx" />
+    <EmbeddedResource Include="weekly_cash_count.frx" />
+    <EmbeddedResource Include="total_member_collections.frx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="quarter_cash_statement.frx" />
+    <None Include="Resources\634520779497696087.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Members\MemberManager.resx">
+      <DependentUpon>MemberManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberView\MemberViewerManager.resx">
+      <DependentUpon>MemberViewerManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberView\MemberViewerMaker.resx">
+      <DependentUpon>MemberViewerMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\NeighbourMaker.resx">
+      <DependentUpon>NeighbourMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OfferingMonthAnalysis.resx">
+      <DependentUpon>OfferingMonthAnalysis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offerings\OfferingRangeAnalysis.resx">
+      <DependentUpon>OfferingRangeAnalysis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\doc-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\usb_stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\usb.ico" />
+    <EmbeddedResource Include="MemberStatus\ApostacyForm.resx">
+      <DependentUpon>ApostacyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberStatus\DeathForm.resx">
+      <DependentUpon>DeathForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberStatus\TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\BulkPicEditor.resx">
+      <DependentUpon>BulkPicEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\MemberDetail.resx">
+      <DependentUpon>MemberDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\MemberUpd.resx">
+      <DependentUpon>MemberUpd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberView\ReportCategoryMaker.resx">
+      <DependentUpon>ReportCategoryMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberView\SaveMemberReport.resx">
+      <DependentUpon>SaveMemberReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\MemberMaker2.resx">
+      <DependentUpon>MemberMaker2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\MemberPicView.resx">
+      <DependentUpon>MemberPicView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\ParentsMaker.resx">
+      <DependentUpon>ParentsMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberView\MemColFilterManager.resx">
+      <DependentUpon>MemColFilterManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OffAnalysis.resx">
+      <DependentUpon>OffAnalysis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus.png" />
+    <None Include="Resources\Add-New.png" />
+    <None Include="Resources\Payments.png" />
+    <None Include="Resources\batch_no.png" />
+    <None Include="Resources\doc-edit1.png" />
+    <None Include="Resources\Excel-icon.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="bin\Debug\Add.ico" />
+    <None Include="bin\Debug\user_add.png" />
+    <None Include="bin\Debug\user_edit.png" />
+    <None Include="bin\Debug\image_bmp.png" />
+    <None Include="bin\Debug\users.png" />
+    <None Include="bin\Debug\user.png" />
+    <EmbeddedResource Include="ChartOfAccounts.xml" />
+    <Content Include="RASMM_100.ico" />
+    <EmbeddedResource Include="Expenses\DailyExpensesManager.resx">
+      <DependentUpon>DailyExpensesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mtoms_MenuF.dat" />
+    <None Include="Resources\MenuBar_ForwardFrame.png" />
+    <None Include="Resources\MenuBar_BackFrame.png" />
+    <None Include="Resources\FlagYellow.gif" />
+    <None Include="Resources\FlagRed.gif" />
+    <None Include="Resources\FlagComplete.gif" />
+    <None Include="Resources\Add_16x16.png" />
+    <None Include="Resources\Folder.gif" />
+    <None Include="Resources\Drive.gif" />
+    <None Include="Resources\TypeNormal.gif" />
+    <None Include="Resources\folder_add.png" />
+    <None Include="Resources\email_add.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\delete.png" />
+    <EmbeddedResource Include="Accounts\COAccounts.resx">
+      <DependentUpon>COAccounts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChurchGroups\ChurchGroupMaker.resx">
+      <DependentUpon>ChurchGroupMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChurchSubUnits\ChurchSubUnits.resx">
+      <DependentUpon>ChurchSubUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creditors\CreditorsManager.resx">
+      <DependentUpon>CreditorsManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departments\DepartmentMaker2.resx">
+      <DependentUpon>DepartmentMaker2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departments\DepartmentManager2.resx">
+      <DependentUpon>DepartmentManager2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses\MakeExpense.resx">
+      <DependentUpon>MakeExpense.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\IncomeAccountsMaker.resx">
+      <DependentUpon>IncomeAccountsMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupDataPicDisplay.resx">
+      <DependentUpon>GroupDataPicDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouseHoldMaker.resx">
+      <DependentUpon>HouseHoldMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberStatistics.resx">
+      <DependentUpon>MemberStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\ChildrenMaker.resx">
+      <DependentUpon>ChildrenMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_view.frx" />
+    <EmbeddedResource Include="Offerings\OfferingYearAnalysis.resx">
+      <DependentUpon>OfferingYearAnalysis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OffMakerN.resx">
+      <DependentUpon>OffMakerN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pledge\PledgeMaker.resx">
+      <DependentUpon>PledgeMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms\ComposeSms.resx">
+      <DependentUpon>ComposeSms.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms\SmsMakerCompany.resx">
+      <DependentUpon>SmsMakerCompany.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms\SmsMakerPersonal.resx">
+      <DependentUpon>SmsMakerPersonal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms\SmsManager.resx">
+      <DependentUpon>SmsManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashAccounttManager.resx">
+      <DependentUpon>CashAccounttManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banking\BankingManager.resx">
+      <DependentUpon>BankingManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrialBalanceForm.resx">
+      <DependentUpon>TrialBalanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkManager.resx">
+      <DependentUpon>WorkManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MergeAccounts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
