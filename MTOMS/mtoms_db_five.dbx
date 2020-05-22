@@ -1,0 +1,1806 @@
+<?xml version="1.0" standalone="yes"?>
+<DB-SCHEMER-FILE Created-Date="Friday, August 24, 2018" DB-Name="mtoms_db_five">
+  <Tables>
+    <Table name="acc_bank_accounts_tb">
+      <Columns>
+        <Col col_name="bank_account_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="bank_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_no" col_type="varchar(150)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="opening_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="currency_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="start_transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bank_alias" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_bank_deposit_child_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="bdep_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="deposited_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="m_partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="int(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bank_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bank_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_bank_deposit_tb">
+      <Columns>
+        <Col col_name="bdep_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="deposited_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="m_partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="voucher_no" col_type="varchar(30)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bank_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bank_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="voucher_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="del_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_time" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_bank_reconc_accounts_tb">
+      <Columns>
+        <Col col_name="br_acc_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="br_acc_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="br_acc_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_bank_reconc_trans_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="br_acc_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="m_partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="description" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="br_acc_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="bank_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_bank_withdraw_tb">
+      <Columns>
+        <Col col_name="wdr_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="w_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bank_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cheque_no" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cheque_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="m_partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(11)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bank_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bank_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="del_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_time" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cheque_alias" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="transfer_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_cash_book_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="dr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="narration" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="ref_no" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pay_mode" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_table_id" col_type="smallint(6)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cb_trans_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_cash_summary_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="open_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="close_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_cash_transfer_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="source_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="destination_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="destination_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="delete_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="delete_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="delete_pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transfer_reason" col_type="varchar(900)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="m_partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_conv_rate_mvt_tb">
+      <Columns>
+        <Col col_name="fr_currency_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="curr_conv_rate" col_type="float" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_cr_exp_off_items_tb">
+      <Columns>
+        <Col col_name="gen_key_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="type_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="un_id" col_type="int(11)" col_key="MUL" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="gen_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="link_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_expense_accounts_tb">
+      <Columns>
+        <Col col_name="exp_acc_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_acc_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_acc_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dept_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dept_parent_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dept_sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr_cg_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr_un_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_cat_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cuc_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_acc_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="inc_sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_expense_cat_tb">
+      <Columns>
+        <Col col_name="exp_cat_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_cat_name" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_expense_trans_child_tb">
+      <Columns>
+        <Col col_name="trans_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="voucher_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="voucher_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="cr_account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="un_id" col_type="int(9)" col_key="MUL" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_expense_trans_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_acc_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="voucher_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="voucher_no" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="voucher_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_details" col_type="varchar(1000)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="m_partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dept_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dept_parent_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_cat_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pay_mode" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cheque_no" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="w_dr_data" col_type="varchar(500)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="del_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_time" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="tf_string" col_type="varchar(1000)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="received_by" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_expense_vouchers_tb">
+      <Columns>
+        <Col col_name="voucher_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="voucher_no" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(12)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(12)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="type_id" col_type="smallint(3)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_foreign_currency_mvt_tb">
+      <Columns>
+        <Col col_name="currency_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="open_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="close_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_foreign_currency_tb">
+      <Columns>
+        <Col col_name="fr_currency_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fr_currency_name" col_type="varchar(150)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="last_exchange_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="last_exchange_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_foreign_exchange_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="currency_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="curr_sys_exch_rate" col_type="float" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="curr_sys_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="used_exch_rate" col_type="float" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exchanged_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="m_partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="del_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_time" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_off_summary_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="total_amount" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_opening_close_balance_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(11)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="o_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="c_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="un_id" col_type="int(9)" col_key="MUL" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="balance_type_id" col_type="smallint(3)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="delete_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_payable_gp_mvt_tb">
+      <Columns>
+        <Col col_name="gp_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_payable_mvt_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cuc_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="open_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="close_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="owner_type_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="owner_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_payable_payments_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount_paid" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="voucher_no" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pay_mode" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cheque_no" col_type="varchar(20)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="description" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_payable_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(33)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="account_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+        <Col col_name="last_access_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="owner_type_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="owner_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="un_id" col_type="int(9)" col_key="MUL" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_acc_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sys_exp_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_payable_trans_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cuc_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="trans_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="ref_no" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="source_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT -1" col_null="" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(9)" col_key="" col_def_val="DEFAULT -1" col_null="" col_auto_incr="" />
+        <Col col_name="owner_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="owner_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="acc_usedbank_cheques_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="bank_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cheque_no" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bank_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="accounts_balance_mvt_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="jsection_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT -1" col_null="" col_auto_incr="" />
+        <Col col_name="open_balance" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="close_balance" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="accounts_current_balance_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="jsection_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT -1" col_null="" col_auto_incr="" />
+        <Col col_name="balance" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="un_id" col_type="int(9)" col_key="MUL" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+      </Columns>
+    </Table>
+    <Table name="accounts_dept_cat_tb">
+      <Columns>
+        <Col col_name="acc_d_cat_id" col_type="int(3)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="acc_d_cat_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="accounts_dept_type_tb">
+      <Columns>
+        <Col col_name="acc_d_type_id" col_type="int(5)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="acc_d_type_name" col_type="varchar(70)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="acc_d_cat_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="disp_index" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="accounts_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="acc_d_cat_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="acc_d_type_id" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="account_type_id" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="account_alias" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="a_level" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="a_index" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="p_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_status_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+        <Col col_name="search_alias" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="is_sys_account" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="post_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="owner_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="owner_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="owner_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="start_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="end_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="opening_balance" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_short_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="account_code" col_type="varchar(20)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="description" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="ex_cg_type_ids" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="last_off_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="accounts_ext_purpose" col_type="smallint(3)" col_key="" col_def_val="DEFAULT -1" col_null="" col_auto_incr="" />
+        <Col col_name="start_transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="link_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="accounts_transaction_tb">
+      <Columns>
+        <Col col_name="transaction_id" col_type="bigint(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="narration" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="trans_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="address_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="phone1" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="phone2" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="email" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="phy_address" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="postal_address" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="division" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="village" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="adjusted_balance_c_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="adj_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="old_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="new_balance" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="adjusted_balance_m_tb">
+      <Columns>
+        <Col col_name="adj_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="adj_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="adj_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="prev_adj_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="next_adj_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="del_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_time" col_type="varchar(30)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="admin_tb_ns">
+      <Columns>
+        <Col col_name="admin_id" col_type="varchar(70)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="admin_pass" col_type="varchar(70)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="apostacy_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="apos_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="apos_fs_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cat_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="reason" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="comment" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="attendance_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="bigint(12)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="sab_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sab_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sab_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="backup_chunks_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="ck_data" col_type="mediumblob" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="backup_last_info_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="smallint(3)" col_key="PRI" col_def_val="DEFAULT 1" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="version_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="backup_tb_ns">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="file_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="file_size" col_type="bigint(13)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="upload_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="backup_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="software_version" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sharew_software_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sharew_app_station_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="rec_count" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="baptismal_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bapt_yr" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bapt_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bapt_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bapt_place" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bapt_pastor" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bapt_country" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bapt_church" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bapt_pastor_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="bapt_church_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="cash_book_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="dr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="narration" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="ref_no" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pay_mode" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_table_id" col_type="smallint(6)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="j_section_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="children_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="child_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="birth_year" col_type="int(5)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="child_mem_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(4)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="gender_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="church_group_members_tb">
+      <Columns>
+        <Col col_name="uno" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cg_type_id" col_type="int(5)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="mem_status" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="start_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="end_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="church_group_tb">
+      <Columns>
+        <Col col_name="cg_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="cg_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cg_type_id" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="church_group_types_tb">
+      <Columns>
+        <Col col_name="cg_type_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="cg_type_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="is_default" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="church_sub_unit_tb">
+      <Columns>
+        <Col col_name="sb_unit_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="sb_unit_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sb_unit_cat_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="sys_gp_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="couple_tb">
+      <Columns>
+        <Col col_name="couple_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="couple_name" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="male_mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="female_mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="is_valid" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_name" col_type="varchar(80)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="db_identifier_tb">
+      <Columns>
+        <Col col_name="db_id" col_type="bigint(11)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="death_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cat_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="death_cause" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="comment" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="death_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="death_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="default_system_settings_tb">
+      <Columns>
+        <Col col_name="setting_name" col_type="varchar(100)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="set_value_int" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="delete_backup_status">
+      <Columns>
+        <Col col_name="db_id" col_type="bigint(13)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="delete_export_tb">
+      <Columns>
+        <Col col_name="del_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="del_command" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="dept_budget_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="dept_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="b_year" col_type="mediumint(5)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="b_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="b_suppl_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="b_spent_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dept_main_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="dept_master_tb_ns">
+      <Columns>
+        <Col col_name="dept_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="is_visible" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dept_name" col_type="varchar(100)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="parent_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="s_level" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="s_index" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="inc_sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr_sys_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="dept_member_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="dept_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="start_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="end_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="mem_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="discpline_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cat_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="reason" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="start_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="end_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="action" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="equity_mvt_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="expense_category_tb">
+      <Columns>
+        <Col col_name="exp_cat_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_cat_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="dept_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dept_parent_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="expense_type_tb">
+      <Columns>
+        <Col col_name="expense_type_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="expense_type_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cuc_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cuc_p_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="acc_exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="parent_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="gp_tb">
+      <Columns>
+        <Col col_name="gp_id" col_type="mediumint(5)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="mgp_id" col_type="mediumint(4)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="gp_name" col_type="varchar(30)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_access" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="group_menu_tb">
+      <Columns>
+        <Col col_name="asn_id" col_type="int(8)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="gp_id" col_type="int(7)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mgp_id" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="m_id" col_type="int(8)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="id_ctr_master_tb">
+      <Columns>
+        <Col col_name="last_val" col_type="int(9)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="year" col_type="int(5)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="alias" col_type="varchar(50)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="id_ctr_temp_tb">
+      <Columns>
+        <Col col_name="uno" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="alias" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="journal_day_tb">
+      <Columns>
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="dr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="acc_d_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="j_section_id" col_type="smallint(3)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="cuc_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="journal_month_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_year" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_month" col_type="smallint(3)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_quarter" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="acc_d_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="j_section_id" col_type="smallint(3)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="cuc_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="journal_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="bigint(11)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="dr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="acc_d_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="j_section_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cuc_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="journal_year_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_year" col_type="int(6)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="dr" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cr" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="acc_d_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="j_section_id" col_type="smallint(3)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="cuc_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="last_opened_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="last_open_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="machine_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="mem_report_category">
+      <Columns>
+        <Col col_name="cat_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="cat_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="mem_report_cols_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="col_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="mr_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="int(5)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="mem_report_details_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mr_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="section_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="f_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="mem_report_master_tb">
+      <Columns>
+        <Col col_name="mr_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mr_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="start_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="end_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(4)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cat_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="member_picture_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="small_pic" col_type="mediumblob" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="big_pic" col_type="mediumblob" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="member_tb">
+      <Columns>
+        <Col col_name="mem_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="mem_code" col_type="varchar(50)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="mem_u_code" col_type="varchar(50)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="mem_title_id" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_o_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_gender_id" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_birth_yr" col_type="int(6)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_birth_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_birth_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="marital_type_id" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="e_fs_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="e_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="baptismal_type_id" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_status_type_id" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mem_educ_level_id" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="prev_church" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="country_id" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="tribe_id" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="join_year" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="join_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="join_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="national_id" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="national_id_type" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="xfield1" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="xfield2" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="mem_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 12" col_null="" col_auto_incr="" />
+        <Col col_name="prev_religion" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="empl_status_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 13" col_null="" col_auto_incr="" />
+        <Col col_name="mem_church_code" col_type="varchar(30)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="mgp_tb">
+      <Columns>
+        <Col col_name="mgp_id" col_type="mediumint(4)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="mgp_name" col_type="varchar(30)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_access" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="neighbour_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="neigh_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="neigh_phone" col_type="varchar(20)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="ng_spouse_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="spouse_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="spouse_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="phone_no" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="marriage_year" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="marriage_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="marriage_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="couple_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pastor_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pastor_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="church_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="church_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="nok_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="nk_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="nk_phone" col_type="varchar(20)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="nk_email" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="nk_phy_address" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="occupation_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="occup_cat_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="occup_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="employer" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="occup_other" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="other_skills" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_account_distribution_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="pcd_1" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pcd_2" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pcd_3" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pcd_4" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_accounts_sab_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="p_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="sab_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sab_fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="sab_wk_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_type_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_accounts_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="bigint(10)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="off_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="p_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="post_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pay_mode" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="receipt_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="curr_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sab_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sab_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sab_wk_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="curr_conv_rate" col_type="float" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="un_reg_name" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_batch_no_settings_tb">
+      <Columns>
+        <Col col_name="sab_fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="entrant_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="batch_count" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="batch_no" col_type="varchar(20)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="batch_total" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="entrant_count" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="entrant_total" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="un_id" col_type="int(9)" col_key="MUL" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_batch_tb">
+      <Columns>
+        <Col col_name="batch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="min_val" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="max_val" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_canc_tb">
+      <Columns>
+        <Col col_name="off_id" col_type="int(9)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="cancel_reason" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="receipt_status" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_close_sabbath_c_tb">
+      <Columns>
+        <Col col_name="sab_fs_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="payment_mode" col_type="smallint(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="currency_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="curr_conv_rate" col_type="float" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="system_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="actual_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="gain_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="deficit_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="reason" col_type="varchar(1000)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sab_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_close_sabbath_m_tb">
+      <Columns>
+        <Col col_name="sab_fs_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="total_system" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="total_actual" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="total_gain" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="total_loss" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sab_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_filter_tb">
+      <Columns>
+        <Col col_name="off_id" col_type="bigint(11)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="source_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="receipt_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(10)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="gender_id" col_type="int(5)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="country_id" col_type="int(9)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="marital_status_id" col_type="int(3)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="marital_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="bapt_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="educ_level_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="age_gp_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="occup_cat_id" col_type="int(6)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="occup_type_id" col_type="int(6)" col_key="" col_def_val="DEFAULT -5" col_null="" col_auto_incr="" />
+        <Col col_name="ch_gp_ids" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="dept_ids" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="dept_main_ids" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sab_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sab_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sab_wk_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_main_tb">
+      <Columns>
+        <Col col_name="off_id" col_type="bigint(11)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="source_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="source_church_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_phone_no" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="source_church_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="source_code" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="receipt_no" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="receipt_code" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="receipt_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pay_mode" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="curr_country_id" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="curr_conv_rate" col_type="float" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="curr_total" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="receipt_total" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sab_date" col_type="datetime" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sab_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="sab_wk_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="f_mem_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="m_mem_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="comment" col_type="mediumtext" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="is_verified" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cheque_no" col_type="varchar(30)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="bank_slip_no" col_type="varchar(30)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="kind_details" col_type="mediumtext" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="kind_value" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="del_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="del_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="del_fs_time" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="batch_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="batch_no" col_type="varchar(20)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="camp_meeting_off_cuc" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="off_member_unreg_tb">
+      <Columns>
+        <Col col_name="mem_name" col_type="varchar(100)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="MUL" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+      </Columns>
+    </Table>
+    <Table name="parents_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="father_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="father_phone" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="father_status" col_type="smallint(2)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="mother_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mother_phone" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mother_status" col_type="smallint(2)" col_key="" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="guardian_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="guardian_phone" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="father_mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="mother_mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="guardian_mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="pcuser_tb">
+      <Columns>
+        <Col col_name="us_id" col_type="mediumint(6)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="us_name" col_type="varchar(60)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="us_pass" col_type="varchar(300)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="mediumint(4)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="mgp_id" col_type="mediumint(4)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_access" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="phone" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="gender" col_type="smallint(2)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="user_pic" col_type="mediumblob" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="user_pic_bytes" col_type="int(10)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="user_type_id" col_type="smallint(6)" col_key="MUL" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="ex_user_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="ex_user_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="pledge_addition_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="source_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="added_pledge_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="pls_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="pl_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pl_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="pledge_master_tb">
+      <Columns>
+        <Col col_name="pl_id" col_type="bigint(11)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="account_id" col_type="int(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="source_phone" col_type="varchar(20)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="amount_pledged" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount_paid" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pl_status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="collect_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pl_mode" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pls_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="added_pledge_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="pledge_payment_mvt_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="off_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pl_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pay_mode" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="source_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="transaction_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pl_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pl_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pls_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="cg_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="pledge_settings_tb">
+      <Columns>
+        <Col col_name="pls_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="start_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="start_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="end_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="end_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="start_year" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount_pledged" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="paid_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pledge_name" col_type="varchar(200)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="pledge_summary_tb">
+      <Columns>
+        <Col col_name="account_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="amount_pledged" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="amount_paid" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_year" col_type="int(6)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_month" col_type="smallint(3)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="status" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="freq" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="printed_records_tb">
+      <Columns>
+        <Col col_name="p_year" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="range_key" col_type="varchar(15)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="profit_loss_mvt_tb">
+      <Columns>
+        <Col col_name="fs_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pl_amount" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="receipt_printer_tb">
+      <Columns>
+        <Col col_name="cpu_id" col_type="varchar(100)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="printer_name" col_type="varchar(150)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="roles_mem_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="role_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="start_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="end_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="start_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="end_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="is_valid" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="roles_tb">
+      <Columns>
+        <Col col_name="role_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="role_name" col_type="varchar(25)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="gp_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="gp_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="h_index" col_type="mediumint(5)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="common_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="is_multi" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 1" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="sms_client_tb">
+      <Columns>
+        <Col col_name="client_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="client_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="client_phone" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="client_email" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="client_sms_cp" col_type="float" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fsys_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="d_header" col_type="varchar(20)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="d_message" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="start_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="end_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="partition_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="sms_contact_tb">
+      <Columns>
+        <Col col_name="uno" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="client_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="c_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="c_phone" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="sms_count_tb">
+      <Columns>
+        <Col col_name="s_count" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="sms_fsys_tb">
+      <Columns>
+        <Col col_name="fsys_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="fsys_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="drive_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fsys_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="f_level" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="f_index" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="p_fsys_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="sms_trans_tb">
+      <Columns>
+        <Col col_name="trans_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="trans_year" col_type="int(6)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="trans_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="trans_time" col_type="varchar(20)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="trans_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="client_name" col_type="varchar(50)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="client_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="heading" col_type="varchar(15)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="message" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="max_char_per_msg" col_type="int(6)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="message_count" col_type="int(6)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="no_of_characters" col_type="int(5)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="phone_string" col_type="longtext" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="phone_count" col_type="int(6)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="client_sms_cp" col_type="float" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="admin_sms_cp" col_type="float" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="account_sms_cp" col_type="float" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="sms_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="partition_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="admin_account_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="WasScheduled" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="account_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="comp_cat_id" col_type="int(8)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="user_type_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="software_copy_db">
+      <Columns>
+        <Col col_name="sc_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="sc_data" col_type="mediumblob" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="software_copy_version_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="s_version" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="station_db_update_tb">
+      <Columns>
+        <Col col_name="station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="db_id" col_type="bigint(11)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="last_bk_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="server_un_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="station_nodes_tb">
+      <Columns>
+        <Col col_name="node_name" col_type="varchar(100)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="node_alias" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="node_type_id" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="node_id" col_type="int(9)" col_key="MUL" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="machine_hid" col_type="varchar(100)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="system_upgraded_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="cversion_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="transfer_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="auto_increment" />
+        <Col col_name="mem_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="cat_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="reason" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="comment" col_type="text" col_key="" col_def_val="" col_null="" col_auto_incr="" />
+        <Col col_name="transfer_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="transfer_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="nchurch_name" col_type="varchar(100)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="church_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="edate" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="pc_us_id" col_type="int(9)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="lch_type_id" col_type="int(4)" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="version_tb">
+      <Columns>
+        <Col col_name="c_version" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="work_transaction_date_tb">
+      <Columns>
+        <Col col_name="un_id" col_type="smallint(5)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="wk_fs_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="wk_fs_id" col_type="int(9)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="fs_time_stamp" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="lch_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+    <Table name="xtime_stamp_tb">
+      <Columns>
+        <Col col_name="tb_name" col_type="varchar(80)" col_key="PRI" col_def_val="" col_null="NOT NULL" col_auto_incr="" />
+        <Col col_name="stamp_id" col_type="bigint(11)" col_key="" col_def_val="DEFAULT 0" col_null="" col_auto_incr="" />
+        <Col col_name="stamp_date" col_type="date" col_key="" col_def_val="" col_null="DEFAULT NULL" col_auto_incr="" />
+        <Col col_name="exp_type" col_type="smallint(3)" col_key="" col_def_val="DEFAULT 33" col_null="" col_auto_incr="" />
+        <Col col_name="app_station_id" col_type="int(9)" col_key="PRI" col_def_val="DEFAULT 0" col_null="NOT NULL" col_auto_incr="" />
+      </Columns>
+    </Table>
+  </Tables>
+</DB-SCHEMER-FILE>
